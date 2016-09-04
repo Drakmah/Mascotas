@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="menuFavoritos">Favoritos</string>
+    <string name="menuOpciones">Settings</string>
+</resources>

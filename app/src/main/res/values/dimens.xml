@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="corner_tarjeta">8dp</dimen>
+    <dimen name="medida_foto_tarjeta">250dp</dimen>
+    <dimen name="medida_icono_hueso">25dp</dimen>
+    <dimen name="medida_texto_tarjeta">20dp</dimen>
+    <dimen name="elevacion_appbar">4dp</dimen>
+</resources>
