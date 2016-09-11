@@ -8,9 +8,18 @@
         android:title="@string/menuFavoritos"
         android:orderInCategory="100"
         app:showAsAction="always"
-        android:icon="@drawable/star"
+        android:icon="@drawable/star">
+    </item>
 
-        >
+    <item
+        android:id="@+id/mContacto"
+        android:title="@string/menuContacto"
+        android:orderInCategory="101">
+    </item>
+    <item
+        android:id="@+id/mAcercaDe"
+        android:title="@string/menuAcercaDe"
+        android:orderInCategory="102">
     </item>
 
 </menu>

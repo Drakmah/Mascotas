@@ -2,4 +2,14 @@
     <string name="app_name">Mascotas</string>
     <string name="menuFavoritos">Favoritos</string>
     <string name="menuOpciones">Settings</string>
+    <string name="nombreFormulario">Nombre</string>
+    <string name="mailFormulario">Mail</string>
+    <string name="mensajeFormulario">Mensaje</string>
+    <string name="textoBotonFormulario">Enviar comentario</string>
+    <string name="menuContacto">Contacto</string>
+    <string name="menuAcercaDe">Acerca de</string>
+    <string name="biografiaDesarrollador">Aqui estará la biografia del desarrollador</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

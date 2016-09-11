@@ -1,6 +1,9 @@
 package com.echolima.mascotas;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,25 +16,29 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
+
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        if(toolbar!=null){
+            setSupportActionBar(toolbar);
+        }
+
+        setUpViewPager();
 
 
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-
-        listaMascotas.setLayoutManager(llm);
-
-        inicializarListaMascotas();
-        inicializarAdaptador();
     }
 
     @Override
@@ -49,25 +56,37 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, Favoritos.class);
                 startActivity(intent);
                 break;
+            case R.id.mContacto:
+                //ejecutar código
+                Intent linkComentario = new Intent(this, Comentarios.class);
+                startActivity(linkComentario);
+                break;
+            case R.id.mAcercaDe:
+                Intent linkAcercaDe = new Intent(this, Biografia.class);
+                startActivity(linkAcercaDe);
+                break;
 
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void inicializarAdaptador (){
 
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
-        listaMascotas.setAdapter(adaptador);
+
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new FragmentPrincipal());
+        fragments.add(new FragmentPerfil());
+
+        return fragments;
     }
 
-    public void inicializarListaMascotas() {
-        mascotas = new ArrayList<Mascota>();
+    private void setUpViewPager(){
 
-        mascotas.add(new Mascota(R.drawable.dog01, "Bobby", "7"));
-        mascotas.add(new Mascota(R.drawable.dog02, "Frey", "4"));
-        mascotas.add(new Mascota(R.drawable.dog03, "Yoyo", "6"));
-        mascotas.add(new Mascota(R.drawable.dog04, "Arly", "2"));
-        mascotas.add(new Mascota(R.drawable.dog05, "Nina", "8"));
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_action_name);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_action_dog);
+
     }
 }

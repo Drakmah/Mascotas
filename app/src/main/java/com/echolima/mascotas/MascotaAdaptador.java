@@ -19,6 +19,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     ArrayList<Mascota> mascotas;
     Activity activity;
+    Mascota mascota;
 
     public MascotaAdaptador (ArrayList<Mascota> mascotas, Activity activity){
         this.mascotas = mascotas;
@@ -46,6 +47,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             public void onClick(View view) {
                 //Código a ejecutar cuando se apriete el boton
                 Toast.makeText(activity, "Has dado rate a " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
@@ -55,6 +58,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     public int getItemCount() {
         return mascotas.size();
     }
+
+
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder{
 
