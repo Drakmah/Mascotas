@@ -6,9 +6,9 @@ package com.echolima.mascotas;
 public class Mascota {
     private int foto;
     private String nombre;
-    private String rate;
+    private int rate;  // hemos cambiado String por int para el metodo suma de onbindviewholder de MascotaAdaptador y FavoritoAdaptador
 
-    public Mascota (int foto, String nombre, String rate){
+    public Mascota (int foto, String nombre, int rate){
         this.foto = foto;
         this.nombre = nombre;
         this.rate = rate;
@@ -30,11 +30,11 @@ public class Mascota {
         this.nombre = nombre;
     }
 
-    public String getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(String rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 }

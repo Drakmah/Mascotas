@@ -35,19 +35,20 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder holder, int position) {
+    public void onBindViewHolder(final MascotaViewHolder holder, int position) {
         final Mascota mascota = mascotas.get(position);
 
         holder.imgfoto.setImageResource(mascota.getFoto());
         holder.tvnombremascota.setText(mascota.getNombre());
-        holder.tvratemascota.setText(mascota.getRate());
+        //holder.tvratemascota.setText(mascota.getRate());  COMENTO ESTA LINEA PORQUE YA ESTA SETEANDO EL HOLDER.TVRATEMASCOTA DENTRO DEL ONCLICKLISTENER
 
         holder.btnRate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Código a ejecutar cuando se apriete el boton
-                Toast.makeText(activity, "Has dado rate a " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
-
+                // Toast.makeText(activity, "Has dado rate a " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+                int cantidad = mascota.getRate(); // ESTA LINEA DE CODIGO SETEA  EL RATE CADA VEZ QUE SE LE DA CLICK AL HUESO BLANCO
+                holder.tvratemascota.setText(""+suma(cantidad, mascota)); // ESTA LINEA DE CODIGO SETEA  EL RATE CADA VEZ QUE SE LE DA CLICK AL HUESO BLANCO
 
             }
         });
@@ -77,6 +78,12 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             tvratemascota   = (TextView) itemView.findViewById(R.id.tvNumeroRate);
             imgcantidadrate = (ImageView) itemView.findViewById(R.id.imgCantidadRate);
         }
+    }
+    public int suma (int cantidad, Mascota mascota){ // FUNCION PARA SUMAR LA CANTIDAD DE RATES DE CADA MASCOTA, SE LLAMA EN EL ONCLIK DENTRO DE ONBINDVIEWHOLDER
+        cantidad = cantidad +1;
+        mascota.setRate(cantidad);
+        return mascota.getRate();
+
     }
 }
 

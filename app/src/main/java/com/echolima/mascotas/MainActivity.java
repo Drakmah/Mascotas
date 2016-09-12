@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
         }
 
+        // toolbar.setLogo(R.drawable.footprint); --> Setea el Logo de la aplicacion (Desactivado porque Material Design no recomienda añadir logos)
+        // toolbar.setTitleMarginStart(150);  --> setea el margen izquierdo en pixeles (Desactivado, su funcion era separar el texto del logo )
+
         setUpViewPager();
 
 

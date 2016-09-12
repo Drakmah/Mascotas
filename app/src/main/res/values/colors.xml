@@ -5,4 +5,5 @@
     <color name="colorAccent">#D2421E</color>
     <color name="colorBoton">#98a712</color>
     <color name="colorTextoBoton">#FFFFFF</color>
+    <color name="colorTextoActionBar">#FFFFFF</color>
 </resources>

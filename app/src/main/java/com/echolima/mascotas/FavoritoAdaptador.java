@@ -38,14 +38,15 @@ public class FavoritoAdaptador extends RecyclerView.Adapter<FavoritoAdaptador.Fa
 
         holder.imgfotofav.setImageResource(favorito.getFoto());
         holder.tvnombremascotafav.setText(favorito.getNombre());
-        holder.tvratemascotafav.setText(favorito.getRate());
+        //holder.tvratemascotafav.setText(favorito.getRate()); // COMENTO ESTA LINEA DE CODIGO PORQUE ENTRA EN CONFLICTO CON EL CODIGO ONCLICK DE MASCOTAADAPTADOR (en onbindviewholder)
 
         holder.btnRatefav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //Código a ejecutar cuando se apriete el boton
-                Toast.makeText(activity, "Has dado rate a " + favorito.getNombre(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(activity, "Has dado rate a " + favorito.getNombre(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Debes dar rate en la lista principal", Toast.LENGTH_SHORT).show();
 
             }
         });

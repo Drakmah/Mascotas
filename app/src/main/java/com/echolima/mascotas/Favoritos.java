@@ -21,7 +21,17 @@ public class Favoritos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Toolbar miToolbar = (Toolbar) findViewById(R.id.miActionBar2); // esta linea junto con la de abajo setea el Toolbar creado en actionBar2.xml
+        setSupportActionBar(miToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// Esta linea activa la flecha hacia atras para volver a MainActivity
+
+        miToolbar.setNavigationIcon(R.drawable.footprint); // setea el icono de navegacion
+
+
+
+
+
 
         listaMascotasFav = (RecyclerView) findViewById(R.id.rvMascotasfavoritas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -39,11 +49,11 @@ public class Favoritos extends AppCompatActivity {
     public void inicializarListaMascotasfav() {
         favoritos = new ArrayList<Mascota>();
 
-        favoritos.add(new Mascota(R.drawable.dog05, "Nina", "7"));
-        favoritos.add(new Mascota(R.drawable.dog01, "Bobby", "8"));
-        favoritos.add(new Mascota(R.drawable.dog03, "Yoyo", "14"));
-        favoritos.add(new Mascota(R.drawable.dog02, "Frey", "10"));
-        favoritos.add(new Mascota(R.drawable.dog04, "Arly", "9"));
+        favoritos.add(new Mascota(R.drawable.dog05, "Nina", 0)); // he cambiado los rates de string a int para el metodo suma de MascotaAdaptador y FavoritoAdaptador
+        favoritos.add(new Mascota(R.drawable.dog01, "Bobby", 0));
+        favoritos.add(new Mascota(R.drawable.dog03, "Yoyo", 0));
+        favoritos.add(new Mascota(R.drawable.dog02, "Frey", 0));
+        favoritos.add(new Mascota(R.drawable.dog04, "Arly", 0));
 
     }
 

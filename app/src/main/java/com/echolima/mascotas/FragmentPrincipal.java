@@ -52,11 +52,11 @@ public class FragmentPrincipal extends Fragment {
     public void inicializarListaMascotas() {
         mascotas = new ArrayList<Mascota>();
 
-        mascotas.add(new Mascota(R.drawable.dog01, "Bobby", "7"));
-        mascotas.add(new Mascota(R.drawable.dog02, "Frey", "4"));
-        mascotas.add(new Mascota(R.drawable.dog03, "Yoyo", "6"));
-        mascotas.add(new Mascota(R.drawable.dog04, "Arly", "2"));
-        mascotas.add(new Mascota(R.drawable.dog05, "Nina", "8"));
+        mascotas.add(new Mascota(R.drawable.dog01, "Bobby", 0)); // he cambiado los rates de string a int para el metodo suma de MascotaAdaptador y FavoritoAdaptador
+        mascotas.add(new Mascota(R.drawable.dog02, "Frey", 0));
+        mascotas.add(new Mascota(R.drawable.dog03, "Yoyo", 0));
+        mascotas.add(new Mascota(R.drawable.dog04, "Arly", 0));
+        mascotas.add(new Mascota(R.drawable.dog05, "Nina", 0));
     }
 
 }

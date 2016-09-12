@@ -54,7 +54,7 @@
                     android:id="@+id/tvNumeroRate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5"
+                    android:text="0"
                     android:textSize="@dimen/medida_texto_tarjeta" />
 
                 <ImageView
