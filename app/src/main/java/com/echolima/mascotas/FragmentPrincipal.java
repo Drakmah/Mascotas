@@ -9,15 +9,20 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.echolima.mascotas.presentador.FragmentPrincipalPresenter;
+import com.echolima.mascotas.presentador.IFragmentPrincipalPresenter;
 
 import java.util.ArrayList;
 
 
 
-public class FragmentPrincipal extends Fragment {
+public class FragmentPrincipal extends Fragment implements IFragmentPrincipalView {
 
     ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
+    private IFragmentPrincipalPresenter presenter; // Interfaz Presenter
 
    /* public FragmentPrincipal() {
         // Required empty public constructor
@@ -31,32 +36,30 @@ public class FragmentPrincipal extends Fragment {
         View v = inflater.inflate(R.layout.fragment_fragment_principal, container, false);
 
         listaMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
-
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-
-        listaMascotas.setLayoutManager(llm);
-
-        inicializarListaMascotas();
-        inicializarAdaptador();
-
+        presenter = new FragmentPrincipalPresenter(this, getContext()); // Instanciamos con la clase Presenter
         return v;
     }
 
-    public void inicializarAdaptador (){
 
+    @Override
+    public void generarLinearLayoutVertical() {
+
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaMascotas.setLayoutManager(llm);
+
+    }
+
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas) {
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(MascotaAdaptador adaptador) {
+
         listaMascotas.setAdapter(adaptador);
+
     }
-
-    public void inicializarListaMascotas() {
-        mascotas = new ArrayList<Mascota>();
-
-        mascotas.add(new Mascota(R.drawable.dog01, "Bobby", 0)); // he cambiado los rates de string a int para el metodo suma de MascotaAdaptador y FavoritoAdaptador
-        mascotas.add(new Mascota(R.drawable.dog02, "Frey", 0));
-        mascotas.add(new Mascota(R.drawable.dog03, "Yoyo", 0));
-        mascotas.add(new Mascota(R.drawable.dog04, "Arly", 0));
-        mascotas.add(new Mascota(R.drawable.dog05, "Nina", 0));
-    }
-
 }

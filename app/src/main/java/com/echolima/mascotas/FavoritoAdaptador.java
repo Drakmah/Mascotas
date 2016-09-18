@@ -38,7 +38,7 @@ public class FavoritoAdaptador extends RecyclerView.Adapter<FavoritoAdaptador.Fa
 
         holder.imgfotofav.setImageResource(favorito.getFoto());
         holder.tvnombremascotafav.setText(favorito.getNombre());
-        //holder.tvratemascotafav.setText(favorito.getRate()); // COMENTO ESTA LINEA DE CODIGO PORQUE ENTRA EN CONFLICTO CON EL CODIGO ONCLICK DE MASCOTAADAPTADOR (en onbindviewholder)
+        holder.tvratemascotafav.setText(String.valueOf(favorito.getRate()) + " Likes"); // Dará error en tiempo de ejecución porque setText solo maneja String y es un dato int. Hay que hacer un String.valueOf para convertirlo a String
 
         holder.btnRatefav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,8 +74,8 @@ public class FavoritoAdaptador extends RecyclerView.Adapter<FavoritoAdaptador.Fa
             imgfotofav         = (ImageView) itemView.findViewById(R.id.ivfotoMascota);
             btnRatefav         = (ImageButton) itemView.findViewById(R.id.btnRate);
             tvnombremascotafav = (TextView) itemView.findViewById(R.id.tvNombreMascota);
-            tvratemascotafav   = (TextView) itemView.findViewById(R.id.tvNumeroRate);
-            imgcantidadratefav = (ImageView) itemView.findViewById(R.id.imgCantidadRate);
+            tvratemascotafav   = (TextView) itemView.findViewById(R.id.tvNumeroRate);   // Este es el TextView que muestra el numero de likes
+            imgcantidadratefav = (ImageView) itemView.findViewById(R.id.imgCantidadRate); // Este el el hueso amarillo
 
         }
     }

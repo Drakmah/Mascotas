@@ -29,7 +29,7 @@ public class Comentarios extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Esta linea activa la flecha hacia atras para volver a MainActivity
 
-        miToolbar.setNavigationIcon(R.drawable.footprint); // setea el icono de navegacion
+        miToolbar.setNavigationIcon(R.drawable.ic_action_flecha_izda); // setea el icono de navegacion
 
 
         Button botonFormulario = (Button) findViewById(R.id.btnBoton1);

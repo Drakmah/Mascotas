@@ -6,7 +6,7 @@
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorPrimary"
     android:elevation="4dp"
-    android:logo="@drawable/footprint"
+    android:logo="@drawable/flecha_izda"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
     <!-- Ponemos los temas @style/ThemeOverlay.AppCompat.Dark.ActionBar y @Style/ThemeOverlay.AppCompat.Dark para que el titulo se vea claro-->

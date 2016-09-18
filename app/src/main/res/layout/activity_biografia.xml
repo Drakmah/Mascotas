@@ -15,7 +15,15 @@
         android:id="@+id/tvBiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/biografiaDesarrollador"
+        android:text="@string/modelo_de_la_BBDD"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/miActionBar2"/>
+    <ImageView
+        android:id="@+id/imagenBBDD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/esquemabbdd"
+        android:layout_below="@id/tvBiografia"/>
 
 </RelativeLayout>
