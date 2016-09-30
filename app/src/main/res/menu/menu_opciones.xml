@@ -21,5 +21,10 @@
         android:title="@string/menuModeloBBDD"
         android:orderInCategory="102">
     </item>
+    <item
+        android:id="@+id/mConfigurarCuenta"
+        android:title="@string/menuConfigurarCuenta"
+        android:orderInCategory="103">
+    </item>
 
 </menu>

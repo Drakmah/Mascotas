@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent linkAcercaDe = new Intent(this, Biografia.class);
                 startActivity(linkAcercaDe);
                 break;
+            case R.id.mConfigurarCuenta:
+                Intent linkLogin = new Intent(this, LoginCuenta.class);
+                startActivity(linkLogin);
+                break;
 
         }
 

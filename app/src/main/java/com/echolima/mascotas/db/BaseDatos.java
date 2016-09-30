@@ -62,8 +62,8 @@ public class BaseDatos extends SQLiteOpenHelper {
     public ArrayList<Mascota> obtenerfavoritas(){
         ArrayList<Mascota> mascotas = new ArrayList<>();
 
-        //String query = "SELECT numero_likes FROM mascota_likes DESC LIMIT 5";
-        String query = "SELECT nombre, foto, ml.numero_likes FROM mascota m, mascota_likes ml WHERE m.id = ml.id_mascota ORDER BY ml.numero_likes LIMIT 5";
+        String query = "SELECT nombre, foto, COUNT(m1.numero_likes)  AS total_likes FROM mascota m, mascota_likes m1 WHERE m.id = m1.id_mascota GROUP BY nombre ORDER BY total_likes DESC LIMIT 5";
+        //String query = "SELECT nombre, foto, ml.numero_likes FROM mascota m, mascota_likes ml WHERE m.id = ml.id_mascota ORDER BY ml.numero_likes LIMIT 5";
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor registros = sqLiteDatabase.rawQuery(query, null);
 
@@ -73,6 +73,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             mascotaActual.setNombre(registros.getString(0));
             mascotaActual.setFoto(registros.getInt(1));
             mascotaActual.setRate(registros.getInt(2));
+
 
             mascotas.add(mascotaActual);
         }
