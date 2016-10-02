@@ -5,14 +5,14 @@ package com.echolima.mascotas;
  */
 public class Mascota {
 
-    private int id;
-    private int foto;
-    private String nombre;
+    private String id;
+    private String nombreCompleto;
+    private String urlFoto;
     private int rate;  // hemos cambiado String por int para el metodo suma de onbindviewholder de MascotaAdaptador y FavoritoAdaptador
 
-    public Mascota (int foto, String nombre, int rate){
-        this.foto = foto;
-        this.nombre = nombre;
+    public Mascota (String urlFoto, String nombreCompleto, int rate){
+        this.urlFoto = urlFoto;
+        this.nombreCompleto = nombreCompleto;
         this.rate = rate;
     }
 
@@ -20,20 +20,28 @@ public class Mascota {
 
     }
 
-    public int getFoto() {
-        return foto;
+    public String getId() {
+        return id;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getUrlFoto() {
+        return urlFoto;
+    }
+
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
     }
 
     public int getRate() {
@@ -42,14 +50,6 @@ public class Mascota {
 
     public void setRate(int rate) {
         this.rate = rate;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }
 

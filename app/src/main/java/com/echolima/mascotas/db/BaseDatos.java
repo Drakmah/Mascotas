@@ -68,14 +68,14 @@ public class BaseDatos extends SQLiteOpenHelper {
         Cursor registros = sqLiteDatabase.rawQuery(query, null);
 
         while (registros.moveToNext()) {
-            Mascota mascotaActual = new Mascota();
+            /*Mascota mascotaActual = new Mascota();
             //mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(0));
             mascotaActual.setFoto(registros.getInt(1));
             mascotaActual.setRate(registros.getInt(2));
 
 
-            mascotas.add(mascotaActual);
+            mascotas.add(mascotaActual);*/
         }
 
         sqLiteDatabase.close();
@@ -90,7 +90,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         Cursor registros = sqLiteDatabase.rawQuery(query, null); // El cursor "registros" apunta a los datos de la query
 
         while (registros.moveToNext()){  // Creamos un objeto Mascota con cada iteracion, hasta que el cursor no pueda moverse a "NEXT"
-            Mascota mascotaActual = new Mascota();
+            /*Mascota mascotaActual = new Mascota();
             mascotaActual.setId(registros.getInt(0)); // Setea el valor del campo Id con lo que haya en el indice 0 ---> el Id
             mascotaActual.setNombre(registros.getString(1)); // Setea el valor del campo Nombre con lo que haya en el indice 1---> el Nombre
             mascotaActual.setFoto(registros.getInt(2)); // Setea el valor del campo foto con lo que haya en el indice 3---> La foto
@@ -106,7 +106,7 @@ public class BaseDatos extends SQLiteOpenHelper {
                 mascotaActual.setRate(0); // si no hay registros en la query, entonces que lo ponga a 0
             }
 
-            mascotas.add(mascotaActual); // LLenamos el Arraylist con el objeto mascotaActual construido en la iteracion, a falta de los likes
+            mascotas.add(mascotaActual); // LLenamos el Arraylist con el objeto mascotaActual construido en la iteracion, a falta de los likes*/
 
         }
         sqLiteDatabase.close(); // Cerramos la conexion a la base de datos

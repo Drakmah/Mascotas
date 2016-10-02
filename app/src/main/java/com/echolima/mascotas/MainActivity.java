@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.mFavoritos:
                 Intent intent = new Intent(this, Favoritos.class);
-                startActivity(intent);
+                //startActivity(intent);
                 break;
             case R.id.mContacto:
                 //ejecutar código

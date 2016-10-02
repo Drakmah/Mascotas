@@ -5,7 +5,9 @@ package com.echolima.mascotas.presentador;
  */
 public interface IFragmentPrincipalPresenter {
 
-    public void obtenerMascotasBaseDatos();
+    public void obtenerMascotasBaseDatos(); // Obtiene las mascotas de la BBDD
+
+    void obtenerMediosRecientes(); // Obtiene las mascotas de Instagram
 
     public void mostrarMascotasRV();
 

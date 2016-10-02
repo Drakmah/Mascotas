@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public interface IFragmentPrincipalView {
 
     public void generarLinearLayoutVertical();
+    public void generarGridLayout();
 
     public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas);
 

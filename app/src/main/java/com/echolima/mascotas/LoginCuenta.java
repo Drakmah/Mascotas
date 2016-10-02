@@ -7,6 +7,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.echolima.mascotas.restApi.ConstantesRestApi;
 
 public class LoginCuenta extends AppCompatActivity {
 
@@ -16,6 +19,7 @@ public class LoginCuenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_cuenta);
+
 
         Toolbar miToolbar = (Toolbar) findViewById(R.id.miActionBar2);// esta linea junto con la de abajo setea el Toolbar creado en actionBar2.xml
         setSupportActionBar(miToolbar);
@@ -31,10 +35,9 @@ public class LoginCuenta extends AppCompatActivity {
             public void onClick(View view) {
                 // Codigo al presionar el boton
 
-                EditText nombre = (EditText) findViewById(R.id.etLoginNombre);
-                nombreLogin = nombre.getText().toString();
-                // aqui pondremos un Intent al fragment perfil pasandole los parametros del nombre
-
+                EditText id = (EditText) findViewById(R.id.etLoginNombre);
+                nombreLogin = id.getText().toString();
+                Toast.makeText(LoginCuenta.this, "Has configurado la cuenta de " + nombreLogin, Toast.LENGTH_SHORT).show();
 
             }
         });
