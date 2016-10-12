@@ -19,7 +19,9 @@ public final class ConstantesRestApi {
     // users/3981781866/media/recent/?access_token=3977997813.cb06a95.048010f25d9b4db2ad44f6eb13205f2a
 
     public static final String KEY_USERS                    = "users/";
-    public static final String ID_USUARIO                         = "3981781866";
+    //public static final String ID_USUARIO                   = "3929345390"; // ID antar.shepherd -- Sin permiso de lectura
+    public static final String ID_USUARIO                   = "3981781866"; // ID miguel.coursera
+    //public static final String ID_USUARIO                   = "3983168698"; // ID de perritojane -- Sin permiso de lectura
     public static final String KEY_GET_RECENT_MEDIA_USER2   = "/media/recent/";
     public static final String URL_GET_RECENT_MEDIA_USER2 = KEY_USERS + ID_USUARIO + KEY_GET_RECENT_MEDIA_USER2 + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 

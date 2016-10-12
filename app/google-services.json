@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "441584838636",
+    "firebase_url": "https://mascotaspgy.firebaseio.com",
+    "project_id": "mascotaspgy",
+    "storage_bucket": "mascotaspgy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441584838636:android:c05cc80621cfdb7a",
+        "android_client_info": {
+          "package_name": "com.echolima.mascotas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441584838636-9ni318sdirafsacl7pego1dhqsubgkge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.echolima.mascotas",
+            "certificate_hash": "E042F79D5750D5EC26EE7272D1B2472510CF3CE9"
+          }
+        },
+        {
+          "client_id": "441584838636-54h2lndh88se04i76vek28cn8gg509cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApk-GcAt0SmsYpBLg0I63-Sh42Cf4JtdY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441584838636-54h2lndh88se04i76vek28cn8gg509cc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
