@@ -3,6 +3,10 @@ package com.echolima.mascotas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Biografia extends AppCompatActivity {
 
@@ -18,5 +22,14 @@ public class Biografia extends AppCompatActivity {
 
         miToolbar.setNavigationIcon(R.drawable.ic_action_flecha_izda); // setea el icono de navegacion
 
+    }
+
+    public void solicitarToken(View v){
+        String token = FirebaseInstanceId.getInstance().getToken();
+        enviarTokenRegistro(token);
+
+    }
+    public void enviarTokenRegistro(String token){
+        Log.d("Token ", token);
     }
 }

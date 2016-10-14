@@ -15,11 +15,18 @@
         android:id="@+id/tvBiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/modelo_de_la_BBDD"
+        android:text="@string/biografiaDesarrollador"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/miActionBar2"/>
-
+    <Button
+        android:id="@+id/btnSolicitarToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solicitar token"
+        android:layout_below="@id/tvBiografia"
+        android:onClick="solicitarToken"
+        />
 
 
 </RelativeLayout>

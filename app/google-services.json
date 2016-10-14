@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "441584838636",
-    "firebase_url": "https://mascotaspgy.firebaseio.com",
-    "project_id": "mascotaspgy",
-    "storage_bucket": "mascotaspgy.appspot.com"
+    "project_number": "769969142703",
+    "firebase_url": "https://mascotas-d90a9.firebaseio.com",
+    "project_id": "mascotas-d90a9",
+    "storage_bucket": "mascotas-d90a9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:441584838636:android:c05cc80621cfdb7a",
+        "mobilesdk_app_id": "1:769969142703:android:c05cc80621cfdb7a",
         "android_client_info": {
           "package_name": "com.echolima.mascotas"
         }
       },
       "oauth_client": [
         {
-          "client_id": "441584838636-9ni318sdirafsacl7pego1dhqsubgkge.apps.googleusercontent.com",
+          "client_id": "769969142703-gkb5mu6lfinofk3s5blatgofgg1bi5tf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.echolima.mascotas",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "441584838636-54h2lndh88se04i76vek28cn8gg509cc.apps.googleusercontent.com",
+          "client_id": "769969142703-ktfl00q9h3umak5sguq2npp75e45d12s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyApk-GcAt0SmsYpBLg0I63-Sh42Cf4JtdY"
+          "current_key": "AIzaSyCelgmf8kRZmcQlUpELTgWCOe6f7WvVC3s"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "441584838636-54h2lndh88se04i76vek28cn8gg509cc.apps.googleusercontent.com",
+              "client_id": "769969142703-ktfl00q9h3umak5sguq2npp75e45d12s.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
