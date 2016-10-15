@@ -18,7 +18,7 @@
     </item>
     <item
         android:id="@+id/mAcercaDe"
-        android:title="@string/menuModeloBBDD"
+        android:title="@string/RecibirNotificaciones"
         android:orderInCategory="102">
     </item>
     <item

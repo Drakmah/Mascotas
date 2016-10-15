@@ -15,7 +15,7 @@
         android:id="@+id/tvBiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apretar boton para enviar token a FireBase"
+        android:text="Apretar botón para enviar los datos a FireBase"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/miActionBar2"/>
