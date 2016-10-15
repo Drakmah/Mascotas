@@ -15,7 +15,7 @@
         android:id="@+id/tvBiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/biografiaDesarrollador"
+        android:text="Apretar boton para enviar token a FireBase"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/miActionBar2"/>
@@ -23,9 +23,9 @@
         android:id="@+id/btnSolicitarToken"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Solicitar token"
+        android:text="Enviar token"
         android:layout_below="@id/tvBiografia"
-        android:onClick="solicitarToken"
+        android:onClick="enviarToken"
         />
 
 

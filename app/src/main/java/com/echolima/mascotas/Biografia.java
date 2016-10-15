@@ -6,7 +6,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.echolima.mascotas.RestApiFireBase.Adapter.RestApiAdapter;
+import com.echolima.mascotas.RestApiFireBase.EndpointsFireBase;
+import com.echolima.mascotas.RestApiFireBase.model.UsuarioResponse;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Biografia extends AppCompatActivity {
 
@@ -24,12 +31,29 @@ public class Biografia extends AppCompatActivity {
 
     }
 
-    public void solicitarToken(View v){
+    public void enviarToken(View v){
         String token = FirebaseInstanceId.getInstance().getToken();
         enviarTokenRegistro(token);
 
     }
     public void enviarTokenRegistro(String token){
         Log.d("Token ", token);
+        RestApiAdapter restApiAdapter = new RestApiAdapter();
+        EndpointsFireBase endpointsFireBase = restApiAdapter.establecerConexionRestAPIFireBase();
+        Call<UsuarioResponse> usuarioResponseCall = endpointsFireBase.registrarTokenID(token);
+
+        usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
+            @Override
+            public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
+                UsuarioResponse usuarioResponse = response.body();
+                Log.d("ID_FIREBASE", usuarioResponse.getId());
+                Log.d("TOKEN_FIREBASE", usuarioResponse.getToken());
+            }
+
+            @Override
+            public void onFailure(Call<UsuarioResponse> call, Throwable t) {
+
+            }
+        });
     }
 }
