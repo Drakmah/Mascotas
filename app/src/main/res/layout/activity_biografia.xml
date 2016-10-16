@@ -15,18 +15,25 @@
         android:id="@+id/tvBiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apretar botón para enviar los datos a FireBase"
-        android:textSize="20dp"
+        android:text="Apretar primer botón para enviar los datos a FireBase, apretar segundo boton para enviar notificacion"
+        android:textSize="16dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/miActionBar2"/>
     <Button
         android:id="@+id/btnSolicitarToken"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enviar token"
+        android:text="Enviar datos a FireBase"
         android:layout_below="@id/tvBiografia"
         android:onClick="enviarToken"
         />
+    <Button
+        android:id="@+id/btnEnviarNotificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar notificacion"
+        android:layout_below="@id/btnSolicitarToken"
+        android:onClick="toqueUsuario"/>
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.echolima.mascotas;
 
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import com.echolima.mascotas.restApi.ConstantesRestApi;
 
 public class LoginCuenta extends AppCompatActivity {
 
-    String nombreLogin;
+    public String nombreLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,11 @@ public class LoginCuenta extends AppCompatActivity {
                 EditText id = (EditText) findViewById(R.id.etLoginNombre);
                 nombreLogin = id.getText().toString();
                 Toast.makeText(LoginCuenta.this, "Has configurado la cuenta de " + nombreLogin, Toast.LENGTH_SHORT).show();
+                /*Codigo comentado por fallo en libreria Auth de FireBase
+                Intent intent = new Intent(LoginCuenta.this, Biografia.class);
+                intent.putExtra("user", nombreLogin);
+                startActivity(intent);*/
+
 
             }
         });

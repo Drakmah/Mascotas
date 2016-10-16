@@ -8,6 +8,13 @@ public class UsuarioResponse {
     // modelo de los datos
     private String id;
     private String token;
+    private String user;
+
+    public UsuarioResponse(String id, String token, String user) {
+        this.id = id;
+        this.token = token;
+        this.user = user;
+    }
 
     public UsuarioResponse(String id, String token) {
         this.id = id;
@@ -31,5 +38,13 @@ public class UsuarioResponse {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }
