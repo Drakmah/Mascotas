@@ -42,13 +42,20 @@ public class Biografia extends AppCompatActivity {
 
     }
 
+    public void servicioFireBaseErrorAuth (View v){
+        String token = FirebaseInstanceId.getInstance().getToken();
+        Log.d("Token ", token);
+
+    }
+
+
     public void enviarToken(View v){
         String token = FirebaseInstanceId.getInstance().getToken();
         enviarTokenRegistro(token);
 
     }
     public void enviarTokenRegistro(String token){
-        Log.d("Token ", token);
+        //Log.d("Token ", token);
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         EndpointsFireBase endpointsFireBase = restApiAdapter.establecerConexionRestAPIFireBase();
         Call<UsuarioResponse> usuarioResponseCall = endpointsFireBase.registrarTokenID(token); // añadir aqui la variable usuario, desactivada por fallo de Auth FireBase

@@ -59,6 +59,14 @@
             </intent-filter>
         </service>
 
+        <receiver android:name=".RespuestasWear">
+            <intent-filter>
+                <action android:name="HOME"></action>
+                <action android:name="LIKE"></action>
+                <action android:name="USUARIO"></action>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

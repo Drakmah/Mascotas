@@ -14,7 +14,10 @@
     <string name="menuConfigurarCuenta">Configurar Cuenta</string>
     <string name="hintLogin">Escribe tu usuario</string>
     <string name="textoBotonLogin">Guardar Cuenta</string>
-    <string name="RecibirNotificaciones">Recibir Notificaciones</string>
+    <string name="RecibirNotificaciones">Notificaciones</string>
+    <string name="accion_01_wear">Ver mi perfil</string>
+    <string name="accion_02_wear">Dar Like</string>
+    <string name="accion_03_wear">Ver usuario</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
